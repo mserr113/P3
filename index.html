@@ -5,24 +5,26 @@
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>ohmyfood | Book the menu you like</title> 
        <link href="css/normalize.css" type="text/css" rel="stylesheet"/>
-       <link href="css/stylesheet.css" type="text/css" rel="stylesheet"/>
+       <link href="css/styles.css   " type="text/css" rel="stylesheet"/>
        <link rel="preconnect" href="https://fonts.googleapis.com">
        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-       <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet">
        <script src="https://kit.fontawesome.com/94dc97db2e.js" crossorigin="anonymous"></script>
        <meta charset="utf-8">
        <meta name="description" content="Book the menu you like. Discover top-of-the-art restaurants picked for you.">
     </head>
 
     <body>
-        <header>
-            <a href="index.html">
-                <img class="logo" src="images/logo/ohmyfood.png" alt="ohmyfood.com | Book the menu you like" title="ohmyfood Logo">
-            </a>
-            <div class="location"> 
-                <i class="fa-solid fa-location-dot fa-lg"></i>
-                <span>Paris,Belleville</span>
-            </div>
+        <header class="header">
+            <nav class="nav">
+                <a href="index.html">
+                    <img class="logo" src="images/logo/ohmyfood.png" alt="ohmyfood.com | Book the menu you like" title="ohmyfood Logo">
+                </a>
+                <div class="location"> 
+                    <i class="fa-solid fa-location-dot fa-lg"></i>
+                    <span>Paris, Belleville</span>
+                </div>
+            </nav>
             <div class="explore">
                 <h2>Book the menu you like</h2>
                 <span>Discover top-of-the-art restaurants we picked for you</span>
@@ -47,37 +49,82 @@
         </header>
         <main class="restaurant-section">
             <h2>Restaurants</h2>
-            <div class="restaurant">    
-                <a href="#" class="restaurant-image">
-                    <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="The Full Palette" title="The Full Palette">
-                    <span>new</span>
-                    <div class="restauraunt-info">
-                        <h4 class="restaurant-name">The Full Palette</h4>
-                        <span class="restaurant-location">New York</span>
-                        <i class="fa-thin fa-heart"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="restaurant">    
-                <a href="#" class="restaurant-image">
-                    <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="The Enchanted Plate" title="The Enchanted Plate">
-                    <span>new</span>
-                    <div class="restauraunt-info">
-                        <h4 class="restaurant-name">The Enchanted Plate</h4>
-                        <span class="restaurant-location">New York</span>
-                        <i class="fa-thin fa-heart"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="restaurant">    
-                <a href="#" class="restaurant-image">
-                    <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Bastille" title="Bastille">
-                    <div class="restauraunt-info">
-                        <h4 class="restaurant-name">Bastille</h4>
-                        <span class="restaurant-location">New York</span>
-                        <i class="fa-thin fa-heart"></i>
-                    </div>
-                </a>
+            <div class="restaurant-listings">
+                <div class="restaurant">    
+                    <a href="#" class="restaurant-image">
+                        <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="The Full Palette" title="The Full Palette">
+                        <span class="new">New</span>
+                        <div class="restaurant-info">
+                            <div class="restaurant-name-location">
+                                <h4 class="restaurant-name">The Full Palette</h4>
+                                <span class="restaurant-location">New York</span>
+                            </div>
+                            <div class="heart-icon">
+                                <i class="fa-regular fa-heart fa-xl"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="restaurant">    
+                    <a href="#" class="restaurant-image">
+                        <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="The Enchanted Plate" title="The Enchanted Plate">
+                        <span class="new">New</span>
+                        <div class="restaurant-info">
+                            <div class="restaurant-name-location">
+                                <h4 class="restaurant-name">The Enchanted Plate</h4>
+                                <span class="restaurant-location">New York</span>
+                            </div>
+                            <div class="heart-icon">
+                                <i class="fa-regular fa-heart fa-xl"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="restaurant">    
+                    <a href="#" class="restaurant-image">
+                        <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Bastille" title="Bastille">
+                        <div class="restaurant-info">
+                            <div class="restaurant-name-location">
+                                <h4 class="restaurant-name">Bastille</h4>
+                                <span class="restaurant-location">New York</span>
+                            </div>
+                            <div class="heart-icon">
+                                <i class="fa-regular fa-heart fa-xl"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="restaurant">    
+                    <a href="#" class="restaurant-image">
+                        <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le Gourmand" title="Le Gourmand">
+                        <div class="restaurant-info">
+                            <div class="restaurant-name-location">
+                                <h4 class="restaurant-name">Le Gourmand</h4>
+                                <span class="restaurant-location">New York</span>
+                            </div>
+                            <div class="heart-icon">
+                                <i class="fa-regular fa-heart fa-xl"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </main>
+        <footer>
+            <a href="index.html">
+                <img class="logo" src="images/logo/ohmyfood.png" alt="ohmyfood.com | Book the menu you like" title="ohmyfood Logo">
+            </a>
+            <ul>
+                <li>
+                    <i class="fa-solid fa-utensils"></i>
+                    <span>Suggest a restaurant</span>
+                </li> 
+                <li>
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    <span>Become a partner</span>
+                </li>
+                <li>Legal</li>
+                <li>Contact</li>
+            </ul>
+        </footer>
     </body>
