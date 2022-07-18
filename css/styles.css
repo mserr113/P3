@@ -1,16 +1,102 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 .nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 .nav .logo {
   width: 200px;
+  padding-bottom: 15px;
+}
+.nav .location {
+  background-color: rgb(234, 234, 234);
+  width: 100%;
+  text-align: center;
+  font: rgb(53, 53, 53);
+  font-size: 18px;
+  padding: 20px 0;
+}
+.nav .location i {
+  padding-right: 15px;
+  font: rgb(53, 53, 53);
+}
+
+.explore, .how-it-works, .restaurant-section {
+  margin-bottom: 50px;
+}
+
+h2, p, button {
+  margin: 0;
+}
+
+.explore {
+  background-color: rgb(246, 246, 246);
+  padding: 30px;
+  text-align: center;
+}
+.explore h2 {
+  padding: 30px 0;
+}
+.explore p {
+  font-size: 20px;
+  font-weight: 300;
+  padding: 30px 0;
+}
+.explore button {
+  border-radius: 25px;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: white;
+  border: none;
+  background-image: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+}
+
+.how-it-works {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.how-it-works ol {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+}
+.how-it-works ol li {
+  counter-increment: my-awesome-counter;
+  background-color: rgb(246, 246, 246);
+  padding: 15px;
+  margin: 15px;
+  border-radius: 15px;
+  position: relative;
+}
+.how-it-works ol li::before {
+  content: counter(my-awesome-counter);
+  background: #9356DC;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 30px;
+  color: white;
+  text-align: center;
+  margin-right: 50px;
+  position: absolute;
+  left: -12px;
+  top: 8px;
+}
+.how-it-works ol li:hover {
+  background-color: rgba(147, 86, 220, 0.1450980392);
+}
+.how-it-works ol li:hover i {
+  color: #9356DC;
+}
+.how-it-works ol li i {
+  padding: 0 20px;
 }
 
 .restaurant-section {
@@ -78,6 +164,30 @@ body {
 .restaurant-section .restaurant-listings .restaurant a .restaurant-info .heart-icon {
   align-self: center;
   padding-right: 15px;
+}
+
+.footer {
+  background-color: rgb(53, 53, 53);
+  padding: 15px;
+}
+.footer .logo {
+  width: 150px;
+  filter: invert(100%);
+}
+.footer ul {
+  padding: 0;
+}
+.footer li {
+  list-style: none;
+  color: white;
+  padding: 5px 0 5px 5px;
+  font-weight: 400;
+}
+.footer li i {
+  padding-right: 5px;
+}
+.footer .li-thin-font {
+  font-weight: 300;
 }
 
 @media screen and (min-width: 900px) {
