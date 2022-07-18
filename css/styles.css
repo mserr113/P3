@@ -167,6 +167,9 @@ h2, p, button {
 .restaurant-section .restaurant-listings .restaurant a .restaurant-info .heart-icon {
   align-self: center;
   padding-right: 15px;
+  background-color: unset;
+  border-style: none;
+  cursor: pointer;
 }
 
 .footer {
