@@ -7,6 +7,7 @@
 
 .header-flex {
   display: flex;
+  background-color: rgb(243, 243, 243);
 }
 .header-flex .logo {
   justify-content: center;
@@ -22,8 +23,6 @@
 
 .restaurant-section {
   background-color: rgb(243, 243, 243);
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
 }
 
 .restaurant-info {
@@ -40,4 +39,39 @@
   position: absolute;
   top: 36px;
   right: 30px;
+}
+
+.menu {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.menu h5 {
+  font-weight: 100;
+  position: relative;
+  padding-bottom: 10px;
+}
+.menu h5:before {
+  position: absolute;
+  left: 0;
+  top: 16px;
+  height: 0;
+  width: 34px;
+  content: "";
+  border-top: 2px solid red;
+}
+.menu .entrees-section,
+.menu .main-dish-section,
+.menu .desserts-section {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.menu .entrees-section .menu-item,
+.menu .main-dish-section .menu-item,
+.menu .desserts-section .menu-item {
+  background-color: white;
+  border-radius: 15px;
+  padding: 12px;
+  line-height: 20px;
 }/*# sourceMappingURL=styles.css.map */

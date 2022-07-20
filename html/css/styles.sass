@@ -9,6 +9,7 @@ $serif: 'Shrikhand', serif
 
 .header-flex
     display: flex
+    background-color: rgb(243, 243, 243)
     .logo
         justify-content: center
         flex: 3
@@ -19,8 +20,6 @@ $serif: 'Shrikhand', serif
     width: 100%
 .restaurant-section
     background-color: rgb(243, 243, 243)
-    border-top-left-radius: 30px
-    border-top-right-radius: 30px
 .restaurant-info
     padding: 20px
     position: relative
@@ -33,5 +32,32 @@ $serif: 'Shrikhand', serif
         position: absolute     
         top: 36px
         right: 30px   
-            
+.menu
+    padding-left: 16px
+    padding-right: 16px
+    h5
+        font-weight: 100
+        position: relative
+        padding-bottom: 10px
+        &:before
+            position: absolute
+            left: 0
+            top: 16px
+            height: 0
+            width: 34px
+            content: ''
+            border-top: 2px solid red
+    .entrees-section, 
+    .main-dish-section,
+    .desserts-section
+        display: flex
+        flex-flow: column
+        gap: 16px
+        margin-bottom: 20px
+        .menu-item
+            background-color: white
+            border-radius: 15px
+            padding: 12px
+            line-height: 20px
+
 
