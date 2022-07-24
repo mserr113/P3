@@ -1,0 +1,100 @@
+$sans-serif: 'Roboto', sans-serif
+$serif: 'Shrikhand', serif
+
+.navigation
+    background-color: rgb(243, 243, 243)
+    .nav-container
+        height: 75px
+        .nav-bar
+            position: relative
+            height: 75px
+            .nav-arrow i
+                position: absolute
+                left: 20px
+                top: 50%
+            .logo-container
+                position: absolute
+                top: 30%
+                left: 50%
+                transform: translateX(-50%)
+                a
+                    display: block
+                    img
+                        width: 200px
+.main
+    .restaurant-image 
+        background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg")
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        padding-top: 100px
+        padding-bottom: 100px
+
+    .restaurant-section
+        background-color: rgb(243, 243, 243)
+        border-top-left-radius: 30px
+        border-top-right-radius: 30px
+        margin-top: -30px
+        .restaurant-info
+            padding: 20px
+            position: relative
+            .restaurant-name
+                font-family: $serif
+                font-size: 28px
+                font-weight: 500
+                display: inline-block
+            i
+                position: absolute     
+                top: 36px
+                right: 30px   
+        .menu
+            padding-left: 16px
+            padding-right: 16px
+            h5
+                font-weight: 100
+                position: relative
+                padding-bottom: 6px
+                font-size: 16px
+                &:before
+                    position: absolute
+                    left: 0
+                    top: 20px
+                    height: 0
+                    width: 40px
+                    content: ''
+                    border-top: 3px solid #99E2D0
+            .entrees-section, 
+            .main-dish-section,
+            .desserts-section
+                display: flex
+                flex-flow: column
+                gap: 16px
+                margin-bottom: 30px
+                .menu-item
+                    background-color: white
+                    border-radius: 15px
+                    padding: 12px
+                    h4
+                        line-height: 25px
+                    .description_price
+                        display: flex
+                        flex-flow: row
+                        .description
+                            font-size: 13px
+                            flex: 3
+                        .price
+                            padding-right: 10px
+                            font-weight: 700
+                            font-size: 14px
+        .order-button
+            text-align: center
+            button
+                margin-top: 20px
+                margin-bottom: 60px
+                padding-left: 60px
+                padding-right: 70px
+        
+
+                    
+
+

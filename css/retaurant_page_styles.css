@@ -1,0 +1,124 @@
+.navigation {
+  background-color: rgb(243, 243, 243);
+}
+.navigation .nav-container {
+  height: 75px;
+}
+.navigation .nav-container .nav-bar {
+  position: relative;
+  height: 75px;
+}
+.navigation .nav-container .nav-bar .nav-arrow i {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+}
+.navigation .nav-container .nav-bar .logo-container {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.navigation .nav-container .nav-bar .logo-container a {
+  display: block;
+}
+.navigation .nav-container .nav-bar .logo-container a img {
+  width: 200px;
+}
+
+.main .restaurant-image {
+  background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.main .restaurant-section {
+  background-color: rgb(243, 243, 243);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-top: -30px;
+}
+.main .restaurant-section .restaurant-info {
+  padding: 20px;
+  position: relative;
+}
+.main .restaurant-section .restaurant-info .restaurant-name {
+  font-family: "Shrikhand", serif;
+  font-size: 28px;
+  font-weight: 500;
+  display: inline-block;
+}
+.main .restaurant-section .restaurant-info i {
+  position: absolute;
+  top: 36px;
+  right: 30px;
+}
+.main .restaurant-section .menu {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.main .restaurant-section .menu h5 {
+  font-weight: 100;
+  position: relative;
+  padding-bottom: 6px;
+  font-size: 16px;
+}
+.main .restaurant-section .menu h5:before {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  height: 0;
+  width: 40px;
+  content: "";
+  border-top: 3px solid #99E2D0;
+}
+.main .restaurant-section .menu .entrees-section,
+.main .restaurant-section .menu .main-dish-section,
+.main .restaurant-section .menu .desserts-section {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+.main .restaurant-section .menu .entrees-section .menu-item,
+.main .restaurant-section .menu .main-dish-section .menu-item,
+.main .restaurant-section .menu .desserts-section .menu-item {
+  background-color: white;
+  border-radius: 15px;
+  padding: 12px;
+}
+.main .restaurant-section .menu .entrees-section .menu-item h4,
+.main .restaurant-section .menu .main-dish-section .menu-item h4,
+.main .restaurant-section .menu .desserts-section .menu-item h4 {
+  line-height: 25px;
+}
+.main .restaurant-section .menu .entrees-section .menu-item .description_price,
+.main .restaurant-section .menu .main-dish-section .menu-item .description_price,
+.main .restaurant-section .menu .desserts-section .menu-item .description_price {
+  display: flex;
+  flex-flow: row;
+}
+.main .restaurant-section .menu .entrees-section .menu-item .description_price .description,
+.main .restaurant-section .menu .main-dish-section .menu-item .description_price .description,
+.main .restaurant-section .menu .desserts-section .menu-item .description_price .description {
+  font-size: 13px;
+  flex: 3;
+}
+.main .restaurant-section .menu .entrees-section .menu-item .description_price .price,
+.main .restaurant-section .menu .main-dish-section .menu-item .description_price .price,
+.main .restaurant-section .menu .desserts-section .menu-item .description_price .price {
+  padding-right: 10px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.main .restaurant-section .order-button {
+  text-align: center;
+}
+.main .restaurant-section .order-button button {
+  margin-top: 20px;
+  margin-bottom: 60px;
+  padding-left: 60px;
+  padding-right: 70px;
+}/*# sourceMappingURL=retaurant_page_styles.css.map */

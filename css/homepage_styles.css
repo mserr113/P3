@@ -1,0 +1,163 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav .logo {
+  width: 200px;
+  padding-bottom: 15px;
+}
+.nav .location {
+  background-color: rgb(234, 234, 234);
+  width: 100%;
+  text-align: center;
+  font: rgb(53, 53, 53);
+  font-size: 18px;
+  padding: 20px 0;
+  box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
+}
+.nav .location i {
+  padding-right: 15px;
+  font: rgb(53, 53, 53);
+}
+
+.explore, .how-it-works {
+  margin-bottom: 50px;
+}
+
+h2, p, button {
+  margin: 0;
+}
+
+.explore {
+  background-color: rgb(246, 246, 246);
+  padding: 30px;
+  text-align: center;
+}
+.explore h2 {
+  padding: 30px 0;
+}
+.explore p {
+  font-size: 20px;
+  font-weight: 300;
+  padding: 30px 0;
+}
+
+.how-it-works {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.how-it-works ol {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+}
+.how-it-works ol li {
+  counter-increment: my-awesome-counter;
+  background-color: rgb(246, 246, 246);
+  padding: 15px;
+  margin: 15px;
+  border-radius: 15px;
+  position: relative;
+}
+.how-it-works ol li::before {
+  content: counter(my-awesome-counter);
+  background: #9356DC;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 30px;
+  color: white;
+  text-align: center;
+  margin-right: 50px;
+  position: absolute;
+  left: -12px;
+  top: 8px;
+}
+.how-it-works ol li:hover {
+  background-color: rgba(147, 86, 220, 0.1450980392);
+}
+.how-it-works ol li:hover i {
+  color: #9356DC;
+}
+.how-it-works ol li i {
+  padding: 0 20px;
+}
+
+.restaurant-section {
+  background-color: rgb(243, 243, 243);
+  padding-bottom: 50px;
+}
+.restaurant-section h2 {
+  padding: 50px 0 0 15px;
+}
+.restaurant-section h2, .restaurant-section h4 {
+  font-weight: 800;
+  margin: 0;
+}
+.restaurant-section .restaurant-listings {
+  display: flex;
+  flex-flow: row wrap;
+}
+.restaurant-section .restaurant-listings .restaurant {
+  margin: 15px;
+  height: auto;
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+.restaurant-section .restaurant-listings .restaurant a {
+  text-decoration: none;
+  color: black;
+}
+.restaurant-section .restaurant-listings .restaurant a img {
+  aspect-ratio: 2/1.1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: scale(1.1);
+  width: 100%;
+  -o-object-position: 0 60%;
+     object-position: 0 60%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: relative;
+}
+.restaurant-section .restaurant-listings .restaurant a .new {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background-color: rgb(153, 226, 208);
+  color: rgb(0, 135, 102);
+  padding: 10px 35px;
+  border-radius: 2px;
+}
+.restaurant-section .restaurant-listings .restaurant a .restaurant-info {
+  display: flex;
+  padding: 20px;
+  line-height: 30px;
+  font-size: 20px;
+}
+.restaurant-section .restaurant-listings .restaurant a .restaurant-info .restaurant-name-location {
+  flex: 3;
+}
+.restaurant-section .restaurant-listings .restaurant a .restaurant-info .restaurant-name {
+  font-size: 22px;
+}
+.restaurant-section .restaurant-listings .restaurant a .restaurant-info .restaurant-location {
+  font-weight: 300;
+}
+.restaurant-section .restaurant-listings .restaurant a .restaurant-info .heart-icon {
+  align-self: center;
+  padding-right: 15px;
+  background-color: unset;
+  border-style: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 900px) {
+  .restaurant {
+    flex: 1 1 33%;
+  }
+}/*# sourceMappingURL=homepage_styles.css.map */
