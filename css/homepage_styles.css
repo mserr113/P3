@@ -1,3 +1,80 @@
+#preloader-wrapper {
+  background-color: rgb(234, 234, 234);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+}
+#preloader-wrapper img {
+  position: absolute;
+  width: 300px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -150px;
+  z-index: 1000;
+  filter: invert(100%);
+}
+
+#preloader {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -200px;
+}
+
+#preloader-logo {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+  float: left;
+  text-align: center;
+  -webkit-animation: rotate-scale-up 1s linear 0.125s 3 both;
+  animation: rotate-scale-up 1s linear 0.125s 3 both;
+  z-index: 1;
+}
+#preloader-logo img {
+  position: absolute;
+  z-index: 2;
+  top: 40%;
+  left: 1%;
+}
+
+@-webkit-keyframes rotate-scale-up {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+    -webkit-transform-transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotateZ(180deg);
+    -webkit-transform-transform: scale(0.5) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+    -webkit-transform-transform: scale(1) rotateZ(360deg);
+  }
+}
+@keyframes rotate-scale-up {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+    -webkit-transform-transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotateZ(180deg);
+    -webkit-transform-transform: scale(0.5) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+    -webkit-transform-transform: scale(1) rotateZ(360deg);
+  }
+}
 .nav {
   display: flex;
   flex-direction: column;
@@ -101,10 +178,10 @@ h2, p, button {
   flex-flow: row wrap;
 }
 .restaurant-section .restaurant-listings .restaurant {
-  margin: 15px;
+  margin: 1em;
   height: auto;
   background-color: white;
-  border-radius: 15px;
+  border-radius: 1em;
   position: relative;
   overflow: hidden;
 }
@@ -120,40 +197,64 @@ h2, p, button {
   width: 100%;
   -o-object-position: 0 60%;
      object-position: 0 60%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  position: relative;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
 }
 .restaurant-section .restaurant-listings .restaurant a .new {
   position: absolute;
-  right: 15px;
-  top: 15px;
+  right: 1em;
+  top: 1em;
   background-color: rgb(153, 226, 208);
   color: rgb(0, 135, 102);
-  padding: 10px 35px;
-  border-radius: 2px;
+  padding: 0.625em 2em;
+  border-radius: 0.125em;
 }
 .restaurant-section .restaurant-listings .restaurant a .restaurant-info {
   display: flex;
-  padding: 20px;
-  line-height: 30px;
-  font-size: 20px;
+  padding: 1.25em;
+  line-height: 1.5em;
+  font-size: 1.25em;
+  align-items: center;
 }
 .restaurant-section .restaurant-listings .restaurant a .restaurant-info .restaurant-name-location {
   flex: 3;
 }
 .restaurant-section .restaurant-listings .restaurant a .restaurant-info .restaurant-name {
-  font-size: 22px;
+  font-size: 1.2em;
 }
 .restaurant-section .restaurant-listings .restaurant a .restaurant-info .restaurant-location {
   font-weight: 300;
 }
-.restaurant-section .restaurant-listings .restaurant a .restaurant-info .heart-icon {
+.restaurant-section .restaurant-listings .restaurant a .restaurant-info .heart-position-container {
   align-self: center;
-  padding-right: 15px;
-  background-color: unset;
-  border-style: none;
+}
+.restaurant-section .restaurant-listings .restaurant a .restaurant-info .heart-position-container .heart {
+  padding-right: 1em;
+  align-self: center;
   cursor: pointer;
+  top: 87%;
+  right: 2%;
+}
+.restaurant-section .restaurant-listings .restaurant a .restaurant-info .heart-position-container .empty-heart {
+  transition: 0.4s;
+  position: absolute;
+  z-index: 1;
+}
+.restaurant-section .restaurant-listings .restaurant a .restaurant-info .heart-position-container .empty-heart:hover {
+  opacity: 0;
+}
+.restaurant-section .restaurant-listings .restaurant a .restaurant-info .heart-position-container .full-heart {
+  position: absolute;
+  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  z-index: 10;
+  transition: 0.4s;
+  opacity: 0;
+}
+.restaurant-section .restaurant-listings .restaurant a .restaurant-info .heart-position-container .full-heart:hover {
+  opacity: 1;
 }
 
 @media screen and (min-width: 900px) {
