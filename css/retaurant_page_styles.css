@@ -102,6 +102,7 @@
   padding: 12px;
   margin-top: 1em;
   margin-bottom: 1em;
+  position: relative;
 }
 .main .restaurant-section .menu .entree-section .menu-wrapper .menu-item h4,
 .main .restaurant-section .menu .main-section .menu-wrapper .menu-item h4,
@@ -126,6 +127,20 @@
   padding-right: 10px;
   font-weight: 700;
   font-size: 14px;
+}
+.main .restaurant-section .menu .entree-section .menu-wrapper .menu-item .selected-item,
+.main .restaurant-section .menu .main-section .menu-wrapper .menu-item .selected-item,
+.main .restaurant-section .menu .dessert-section .menu-wrapper .menu-item .selected-item {
+  position: absolute;
+  padding: 25px;
+  color: white;
+  background-color: #99E2D0;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  opacity: 0;
 }
 .main .restaurant-section .order-button {
   text-align: center;
