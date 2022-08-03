@@ -8,6 +8,10 @@
   width: 100%;
   position: fixed;
   z-index: 1000;
+  -webkit-animation: fadeout ease 3s;
+          animation: fadeout ease 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 #preloader-wrapper img {
   position: absolute;
@@ -47,34 +51,6 @@
   left: 1%;
 }
 
-@-webkit-keyframes rotate-scale-up {
-  0% {
-    -webkit-transform: scale(1) rotateZ(0);
-    -webkit-transform-transform: scale(1) rotateZ(0);
-  }
-  50% {
-    -webkit-transform: scale(0.5) rotateZ(180deg);
-    -webkit-transform-transform: scale(0.5) rotateZ(180deg);
-  }
-  100% {
-    -webkit-transform: scale(1) rotateZ(360deg);
-    -webkit-transform-transform: scale(1) rotateZ(360deg);
-  }
-}
-@keyframes rotate-scale-up {
-  0% {
-    -webkit-transform: scale(1) rotateZ(0);
-    -webkit-transform-transform: scale(1) rotateZ(0);
-  }
-  50% {
-    -webkit-transform: scale(0.5) rotateZ(180deg);
-    -webkit-transform-transform: scale(0.5) rotateZ(180deg);
-  }
-  100% {
-    -webkit-transform: scale(1) rotateZ(360deg);
-    -webkit-transform-transform: scale(1) rotateZ(360deg);
-  }
-}
 .nav {
   display: flex;
   flex-direction: column;
@@ -185,11 +161,11 @@ h2, p, button {
   position: relative;
   overflow: hidden;
 }
-.restaurant-section .restaurant-listings .restaurant a {
+.restaurant-section .restaurant-listings .restaurant .restaurant-image {
   text-decoration: none;
   color: black;
 }
-.restaurant-section .restaurant-listings .restaurant a img {
+.restaurant-section .restaurant-listings .restaurant .restaurant-image img {
   aspect-ratio: 2/1.1;
   -o-object-fit: cover;
      object-fit: cover;
@@ -200,7 +176,7 @@ h2, p, button {
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
 }
-.restaurant-section .restaurant-listings .restaurant a .new {
+.restaurant-section .restaurant-listings .restaurant .restaurant-image .new {
   position: absolute;
   right: 1em;
   top: 1em;
@@ -209,41 +185,41 @@ h2, p, button {
   padding: 0.625em 2em;
   border-radius: 0.125em;
 }
-.restaurant-section .restaurant-listings .restaurant a .restaurant-info {
+.restaurant-section .restaurant-listings .restaurant .restaurant-image .restaurant-info {
   display: flex;
   padding: 1.25em;
   line-height: 1.5em;
   font-size: 1.25em;
   align-items: center;
 }
-.restaurant-section .restaurant-listings .restaurant a .restaurant-info .restaurant-name-location {
+.restaurant-section .restaurant-listings .restaurant .restaurant-image .restaurant-info .restaurant-name-location {
   flex: 3;
 }
-.restaurant-section .restaurant-listings .restaurant a .restaurant-info .restaurant-name {
+.restaurant-section .restaurant-listings .restaurant .restaurant-image .restaurant-info .restaurant-name {
   font-size: 1.2em;
 }
-.restaurant-section .restaurant-listings .restaurant a .restaurant-info .restaurant-location {
+.restaurant-section .restaurant-listings .restaurant .restaurant-image .restaurant-info .restaurant-location {
   font-weight: 300;
 }
-.restaurant-section .restaurant-listings .restaurant a .restaurant-info .heart-position-container {
+.restaurant-section .restaurant-listings .restaurant .restaurant-image .restaurant-info .heart-position-container {
   align-self: center;
 }
-.restaurant-section .restaurant-listings .restaurant a .restaurant-info .heart-position-container .heart {
+.restaurant-section .restaurant-listings .restaurant .restaurant-image .restaurant-info .heart-position-container .heart {
   padding-right: 1em;
   align-self: center;
   cursor: pointer;
-  top: 87%;
-  right: 2%;
+  bottom: 30px;
+  right: 0;
 }
-.restaurant-section .restaurant-listings .restaurant a .restaurant-info .heart-position-container .empty-heart {
+.restaurant-section .restaurant-listings .restaurant .restaurant-image .restaurant-info .heart-position-container .empty-heart {
   transition: 0.4s;
   position: absolute;
   z-index: 1;
 }
-.restaurant-section .restaurant-listings .restaurant a .restaurant-info .heart-position-container .empty-heart:hover {
+.restaurant-section .restaurant-listings .restaurant .restaurant-image .restaurant-info .heart-position-container .empty-heart:hover {
   opacity: 0;
 }
-.restaurant-section .restaurant-listings .restaurant a .restaurant-info .heart-position-container .full-heart {
+.restaurant-section .restaurant-listings .restaurant .restaurant-image .restaurant-info .heart-position-container .full-heart {
   position: absolute;
   background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
   color: transparent;
@@ -253,10 +229,54 @@ h2, p, button {
   transition: 0.4s;
   opacity: 0;
 }
-.restaurant-section .restaurant-listings .restaurant a .restaurant-info .heart-position-container .full-heart:hover {
+.restaurant-section .restaurant-listings .restaurant .restaurant-image .restaurant-info .heart-position-container .full-heart:hover {
   opacity: 1;
 }
 
+@-webkit-keyframes rotate-scale-up {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+    -webkit-transform-transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotateZ(180deg);
+    -webkit-transform-transform: scale(0.5) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+    -webkit-transform-transform: scale(1) rotateZ(360deg);
+  }
+}
+@keyframes rotate-scale-up {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+    -webkit-transform-transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotateZ(180deg);
+    -webkit-transform-transform: scale(0.5) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+    -webkit-transform-transform: scale(1) rotateZ(360deg);
+  }
+}
+@-webkit-keyframes fadeout {
+  90% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+@keyframes fadeout {
+  90% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
 @media screen and (min-width: 900px) {
   .restaurant {
     flex: 1 1 33%;

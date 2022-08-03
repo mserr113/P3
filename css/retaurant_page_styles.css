@@ -62,7 +62,6 @@
 .main .restaurant-section .menu h5 {
   font-weight: 100;
   position: relative;
-  padding-bottom: 6px;
   font-size: 16px;
 }
 .main .restaurant-section .menu h5:before {
@@ -74,41 +73,56 @@
   content: "";
   border-top: 3px solid #99E2D0;
 }
-.main .restaurant-section .menu .entrees-section,
-.main .restaurant-section .menu .main-dish-section,
-.main .restaurant-section .menu .desserts-section {
+.main .restaurant-section .menu .entree-section,
+.main .restaurant-section .menu .main-section,
+.main .restaurant-section .menu .dessert-section {
   display: flex;
   flex-flow: column;
   gap: 16px;
   margin-bottom: 30px;
 }
-.main .restaurant-section .menu .entrees-section .menu-item,
-.main .restaurant-section .menu .main-dish-section .menu-item,
-.main .restaurant-section .menu .desserts-section .menu-item {
+.main .restaurant-section .menu .entree-section .menu-wrapper,
+.main .restaurant-section .menu .main-section .menu-wrapper,
+.main .restaurant-section .menu .dessert-section .menu-wrapper {
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  opacity: 0;
+}
+.main .restaurant-section .menu .entree-section .menu-wrapper .menu-item,
+.main .restaurant-section .menu .main-section .menu-wrapper .menu-item,
+.main .restaurant-section .menu .dessert-section .menu-wrapper .menu-item {
   background-color: white;
   border-radius: 15px;
   padding: 12px;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
-.main .restaurant-section .menu .entrees-section .menu-item h4,
-.main .restaurant-section .menu .main-dish-section .menu-item h4,
-.main .restaurant-section .menu .desserts-section .menu-item h4 {
+.main .restaurant-section .menu .entree-section .menu-wrapper .menu-item h4,
+.main .restaurant-section .menu .main-section .menu-wrapper .menu-item h4,
+.main .restaurant-section .menu .dessert-section .menu-wrapper .menu-item h4 {
   line-height: 25px;
 }
-.main .restaurant-section .menu .entrees-section .menu-item .description_price,
-.main .restaurant-section .menu .main-dish-section .menu-item .description_price,
-.main .restaurant-section .menu .desserts-section .menu-item .description_price {
+.main .restaurant-section .menu .entree-section .menu-wrapper .menu-item .description_price,
+.main .restaurant-section .menu .main-section .menu-wrapper .menu-item .description_price,
+.main .restaurant-section .menu .dessert-section .menu-wrapper .menu-item .description_price {
   display: flex;
   flex-flow: row;
 }
-.main .restaurant-section .menu .entrees-section .menu-item .description_price .description,
-.main .restaurant-section .menu .main-dish-section .menu-item .description_price .description,
-.main .restaurant-section .menu .desserts-section .menu-item .description_price .description {
+.main .restaurant-section .menu .entree-section .menu-wrapper .menu-item .description_price .description,
+.main .restaurant-section .menu .main-section .menu-wrapper .menu-item .description_price .description,
+.main .restaurant-section .menu .dessert-section .menu-wrapper .menu-item .description_price .description {
   font-size: 13px;
   flex: 3;
 }
-.main .restaurant-section .menu .entrees-section .menu-item .description_price .price,
-.main .restaurant-section .menu .main-dish-section .menu-item .description_price .price,
-.main .restaurant-section .menu .desserts-section .menu-item .description_price .price {
+.main .restaurant-section .menu .entree-section .menu-wrapper .menu-item .description_price .price,
+.main .restaurant-section .menu .main-section .menu-wrapper .menu-item .description_price .price,
+.main .restaurant-section .menu .dessert-section .menu-wrapper .menu-item .description_price .price {
   padding-right: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -121,4 +135,37 @@
   margin-bottom: 60px;
   padding-left: 60px;
   padding-right: 70px;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.menu-wrapper-2 {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+.menu-wrapper-3 {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }/*# sourceMappingURL=retaurant_page_styles.css.map */
