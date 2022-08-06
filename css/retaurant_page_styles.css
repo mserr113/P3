@@ -99,32 +99,37 @@
 .main .restaurant-section .menu .dessert-section .menu-wrapper .menu-item {
   background-color: white;
   border-radius: 15px;
-  padding: 12px;
+  padding-left: 15px;
   margin-top: 1em;
   margin-bottom: 1em;
-  position: relative;
   overflow: hidden;
-}
-.main .restaurant-section .menu .entree-section .menu-wrapper .menu-item h4,
-.main .restaurant-section .menu .main-section .menu-wrapper .menu-item h4,
-.main .restaurant-section .menu .dessert-section .menu-wrapper .menu-item h4 {
-  line-height: 25px;
-}
-.main .restaurant-section .menu .entree-section .menu-wrapper .menu-item .description_price,
-.main .restaurant-section .menu .main-section .menu-wrapper .menu-item .description_price,
-.main .restaurant-section .menu .dessert-section .menu-wrapper .menu-item .description_price {
   display: flex;
   flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
 }
-.main .restaurant-section .menu .entree-section .menu-wrapper .menu-item .description_price .description,
-.main .restaurant-section .menu .main-section .menu-wrapper .menu-item .description_price .description,
-.main .restaurant-section .menu .dessert-section .menu-wrapper .menu-item .description_price .description {
+.main .restaurant-section .menu .entree-section .menu-wrapper .menu-item .item-description,
+.main .restaurant-section .menu .main-section .menu-wrapper .menu-item .item-description,
+.main .restaurant-section .menu .dessert-section .menu-wrapper .menu-item .item-description {
+  display: flex;
+  flex-flow: column;
+  flex: 3;
+}
+.main .restaurant-section .menu .entree-section .menu-wrapper .menu-item .item-description h4,
+.main .restaurant-section .menu .main-section .menu-wrapper .menu-item .item-description h4,
+.main .restaurant-section .menu .dessert-section .menu-wrapper .menu-item .item-description h4 {
+  line-height: 25px;
+}
+.main .restaurant-section .menu .entree-section .menu-wrapper .menu-item .description,
+.main .restaurant-section .menu .main-section .menu-wrapper .menu-item .description,
+.main .restaurant-section .menu .dessert-section .menu-wrapper .menu-item .description {
   font-size: 13px;
   flex: 3;
 }
-.main .restaurant-section .menu .entree-section .menu-wrapper .menu-item .description_price .price,
-.main .restaurant-section .menu .main-section .menu-wrapper .menu-item .description_price .price,
-.main .restaurant-section .menu .dessert-section .menu-wrapper .menu-item .description_price .price {
+.main .restaurant-section .menu .entree-section .menu-wrapper .menu-item .price,
+.main .restaurant-section .menu .main-section .menu-wrapper .menu-item .price,
+.main .restaurant-section .menu .dessert-section .menu-wrapper .menu-item .price {
   padding-right: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -132,21 +137,17 @@
 .main .restaurant-section .menu .entree-section .menu-wrapper .menu-item .selected-item,
 .main .restaurant-section .menu .main-section .menu-wrapper .menu-item .selected-item,
 .main .restaurant-section .menu .dessert-section .menu-wrapper .menu-item .selected-item {
-  position: absolute;
-  padding: 25px;
-  color: white;
-  background-color: #99E2D0;
+  position: relative;
   right: -50px;
-  top: 0px;
-  bottom: 0px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
 }
-.main .restaurant-section .menu .entree-section .menu-wrapper .menu-item .selected-item:hover,
-.main .restaurant-section .menu .main-section .menu-wrapper .menu-item .selected-item:hover,
-.main .restaurant-section .menu .dessert-section .menu-wrapper .menu-item .selected-item:hover {
+.main .restaurant-section .menu .entree-section .menu-wrapper .menu-item:hover > .selected-item,
+.main .restaurant-section .menu .main-section .menu-wrapper .menu-item:hover > .selected-item,
+.main .restaurant-section .menu .dessert-section .menu-wrapper .menu-item:hover > .selected-item {
   -webkit-animation: slide-left 1s forwards;
           animation: slide-left 1s forwards;
+  color: white;
+  background-color: #99E2D0;
+  padding: 25px;
 }
 .main .restaurant-section .order-button {
   text-align: center;
@@ -161,6 +162,7 @@
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0%;
+    margin-top: 2em;
   }
   50% {
     opacity: 50%;
@@ -173,6 +175,7 @@
 @keyframes fade-in {
   0% {
     opacity: 0%;
+    margin-top: 2em;
   }
   50% {
     opacity: 50%;

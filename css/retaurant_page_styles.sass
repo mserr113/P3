@@ -78,35 +78,37 @@ $serif: 'Shrikhand', serif
                     .menu-item
                         background-color: white
                         border-radius: 15px
-                        padding: 12px
+                        padding-left: 15px
                         margin-top: 1em
                         margin-bottom: 1em
-                        position: relative
                         overflow: hidden
-                        h4
-                            line-height: 25px
-                        .description_price
+                        display: flex
+                        flex-flow: row
+                        justify-content: center
+                        align-items: center
+                        height: 60px
+                        .item-description
                             display: flex
-                            flex-flow: row
-                            .description
-                                font-size: 13px
-                                flex: 3
-                            .price
-                                padding-right: 10px
-                                font-weight: 700
-                                font-size: 14px
+                            flex-flow: column
+                            flex: 3
+                            h4
+                                line-height: 25px 
+                        .description
+                            font-size: 13px
+                            flex: 3
+                        .price
+                            padding-right: 10px
+                            font-weight: 700
+                            font-size: 14px
                         .selected-item
-                            position: absolute
-                            padding: 25px
+                            position: relative
+                            right: -50px
+                        &:hover > .selected-item
+                            animation: slide-left 1s forwards
                             color: white
                             background-color: #99E2D0
-                            right: -50px
-                            top: 0px
-                            bottom: 0px
-                            border-top-right-radius: 15px
-                            border-bottom-right-radius: 15px
-                            &:hover
-                                animation: slide-left 1s forwards
+                            padding: 25px
+                        
                                 
 
         .order-button
@@ -120,6 +122,7 @@ $serif: 'Shrikhand', serif
 @keyframes fade-in
   0%
     opacity: 0%
+    margin-top: 2em
   
   50%
     opacity: 50%
