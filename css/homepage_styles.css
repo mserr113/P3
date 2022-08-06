@@ -51,6 +51,10 @@
   left: 1%;
 }
 
+.page-wrapper {
+  z-index: 10000;
+}
+
 .nav {
   display: flex;
   flex-direction: column;
@@ -245,6 +249,7 @@ h2, p, button {
   100% {
     -webkit-transform: scale(1) rotateZ(360deg);
     -webkit-transform-transform: scale(1) rotateZ(360deg);
+    opacity: 0;
   }
 }
 @keyframes rotate-scale-up {
@@ -259,22 +264,17 @@ h2, p, button {
   100% {
     -webkit-transform: scale(1) rotateZ(360deg);
     -webkit-transform-transform: scale(1) rotateZ(360deg);
+    opacity: 0;
   }
 }
 @-webkit-keyframes fadeout {
-  90% {
-    opacity: 100%;
-  }
   100% {
-    opacity: 0%;
+    z-index: -1;
   }
 }
 @keyframes fadeout {
-  90% {
-    opacity: 100%;
-  }
   100% {
-    opacity: 0%;
+    z-index: -1;
   }
 }
 @media screen and (min-width: 900px) {
