@@ -8,7 +8,7 @@
     width: 100%
     position: fixed
     z-index: 1000
-    animation: fadeout ease 3s
+    animation: fadeout 3s
     animation-fill-mode: forwards 
     img
         position: absolute
@@ -18,7 +18,6 @@
         left: 50%
         margin: -25px 0 0 -150px
         z-index: 1000
-        filter: invert(100%)
 
 #preloader
     position: absolute
@@ -35,8 +34,8 @@
     background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%)
     float: left
     text-align: center
-    -webkit-animation: rotate-scale-up 1s linear 0.125s 3 both
-    animation: rotate-scale-up 1s linear 0.125s 3 both
+    -webkit-animation: rotate-scale-up 3s linear 0.125s 1 both
+    animation: rotate-scale-up 3s linear 0.125s 1 both
     z-index: 1
     img
         position: absolute
@@ -199,7 +198,6 @@ h2, p, button
   100% 
     -webkit-transform: scale(1) rotateZ(360deg)
             transform: scale(1) rotateZ(360deg)
-    opacity: 0
 
 @keyframes rotate-scale-up 
   0% 
@@ -213,11 +211,18 @@ h2, p, button
   100% 
     -webkit-transform: scale(1) rotateZ(360deg)
             transform: scale(1) rotateZ(360deg)
-    opacity: 0
 
 @keyframes fadeout
+    0%
+        opacity: 1
+    
+    90%
+        opacity: 1
+        
     100%
         z-index: -1
+        opacity: 0
+    
 
 
 @media screen and (min-width: 900px)
