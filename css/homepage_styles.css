@@ -62,7 +62,7 @@
 }
 .nav .logo {
   width: 200px;
-  padding-bottom: 15px;
+  padding: 15px;
 }
 .nav .location {
   background-color: rgb(234, 234, 234);
