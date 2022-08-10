@@ -50,10 +50,38 @@
   font-weight: 500;
   display: inline-block;
 }
-.main .restaurant-section .restaurant-info i {
+.main .restaurant-section .restaurant-info .heart-position-container {
+  align-self: center;
+}
+.main .restaurant-section .restaurant-info .heart-position-container .heart {
+  cursor: pointer;
   position: absolute;
+}
+.main .restaurant-section .restaurant-info .heart-position-container .empty-heart {
+  transition: 0.4s;
+  z-index: 1;
   top: 36px;
   right: 30px;
+}
+.main .restaurant-section .restaurant-info .heart-position-container .empty-heart:hover {
+  opacity: 0;
+}
+.main .restaurant-section .restaurant-info .heart-position-container .full-heart {
+  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 1px;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  z-index: 10;
+  transition: 0.4s;
+  opacity: 0;
+  top: 34px;
+  right: 30px;
+}
+.main .restaurant-section .restaurant-info .heart-position-container .full-heart:hover {
+  opacity: 1;
 }
 .main .restaurant-section .menu {
   padding-left: 16px;
@@ -149,6 +177,12 @@
   background-color: #99E2D0;
   padding: 25px;
 }
+.main .restaurant-section .menu .entree-section .menu-wrapper .menu-item:hover > .selected-item i,
+.main .restaurant-section .menu .main-section .menu-wrapper .menu-item:hover > .selected-item i,
+.main .restaurant-section .menu .dessert-section .menu-wrapper .menu-item:hover > .selected-item i {
+  -webkit-animation: rotate 1s;
+          animation: rotate 1s;
+}
 .main .restaurant-section .order-button {
   text-align: center;
 }
@@ -202,5 +236,41 @@
 @keyframes slide-left {
   100% {
     right: 0;
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (min-width: 1000px) {
+  .entree-section,
+.main-section,
+.dessert-section {
+    gap: 50px;
+    margin-bottom: 0;
+  }
+  .entree-section .menu-wrapper,
+.main-section .menu-wrapper,
+.dessert-section .menu-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+  .entree-section .menu-wrapper .menu-item,
+.main-section .menu-wrapper .menu-item,
+.dessert-section .menu-wrapper .menu-item {
+    width: 33%;
   }
 }/*# sourceMappingURL=retaurant_page_styles.css.map */
