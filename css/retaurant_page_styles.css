@@ -1,31 +1,25 @@
-.navigation {
-  background-color: rgb(243, 243, 243);
-}
-.navigation .nav-container {
-  height: 75px;
-}
-.navigation .nav-container .nav-bar {
+.nav-container .nav-bar {
   position: relative;
-  height: 75px;
+  height: 63px;
 }
-.navigation .nav-container .nav-bar .nav-arrow i {
+.nav-container .nav-bar .nav-arrow i {
   position: absolute;
   left: 20px;
   top: 50%;
 }
-.navigation .nav-container .nav-bar .nav-arrow:visited {
+.nav-container .nav-bar .nav-arrow:visited {
   color: black;
 }
-.navigation .nav-container .nav-bar .logo-container {
+.nav-container .nav-bar .logo-container {
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 50%;
   transform: translateX(-50%);
 }
-.navigation .nav-container .nav-bar .logo-container a {
+.nav-container .nav-bar .logo-container a {
   display: block;
 }
-.navigation .nav-container .nav-bar .logo-container a img {
+.nav-container .nav-bar .logo-container a img {
   width: 200px;
 }
 
@@ -54,7 +48,7 @@
 }
 
 .restaurant-section {
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(246, 246, 246);
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   margin-top: -30px;
