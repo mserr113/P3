@@ -207,7 +207,7 @@
   padding-right: 70px;
 }
 
-@-webkit-keyframes fade-in {
+@keyframes fade-in {
   0% {
     opacity: 0%;
     margin-top: 2em;
@@ -219,8 +219,7 @@
     opacity: 100%;
   }
 }
-
-@keyframes fade-in {
+@-webkit-keyframes fade-in {
   0% {
     opacity: 0%;
     margin-top: 2em;
@@ -258,7 +257,7 @@
     right: 0px;
   }
 }
-@-webkit-keyframes rotate {
+@keyframes rotate {
   0% {
     transform: rotate(0);
   }
@@ -266,7 +265,7 @@
     transform: rotate(360deg);
   }
 }
-@keyframes rotate {
+@-webkit-keyframes rotate {
   0% {
     transform: rotate(0);
   }
