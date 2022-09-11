@@ -241,7 +241,7 @@
           animation-delay: 1.5s;
 }
 
-@-webkit-keyframes slide-left {
+@keyframes slide-left {
   0% {
     right: -30px;
   }
@@ -249,7 +249,7 @@
     right: 0px;
   }
 }
-@keyframes slide-left {
+@-webkit-keyframes slide-left {
   0% {
     right: -30px;
   }
